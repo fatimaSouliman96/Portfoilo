@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.active{
+  border-bottom: 1px solid #17133F;
+  font-weight: 600;
+}
+.scal:hover{
+  transform: scale(1.04);
+}
+
+@font-face {
+  font-family: 'Madani Arabic Medium';
+  src: url('https://cdn.example.com/fonts/MadaniArabic-Medium.woff2') format('woff2'),
+       url('https://cdn.example.com/fonts/MadaniArabic-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Apply using Tailwind */
+.font-madani {
+  font-family: 'Madani Arabic Medium', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 9px!important;
+  background-color: transparent!important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4f1787;
+  border-radius: 40px;
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent!important;
+  width: 15px;
+
+}
+
+@layer base {img { display: initial;}}
