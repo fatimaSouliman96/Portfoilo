@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import NavBar from "@/components/NavBar/NavBar";
-import Footer from "@/components/footer/Footer";
-import { Work_Sans } from "next/font/google";
 
-
-
-
-const workSans = Work_Sans({
-  subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '800'],
-  display: 'swap',
-});
 
 export async function generateMetadata(): Promise<Metadata> {
 
