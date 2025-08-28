@@ -1,5 +1,6 @@
-import Image from 'next/image';
+
 import React from 'react'
+import Skill from '../Skill/Skills';
 
 export default function Skills() {
     const skills = [
@@ -17,20 +18,8 @@ export default function Skills() {
                 Skills
             </p>
             <div className="grid pt-8 grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6">
-                {skills.map((skill) => (
-                    <div
-                        key={skill.name}
-                        className="group bg-white/5 hover:bg-white/10 transition-all p-4 rounded-2xl flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.1)]"
-                    >
-                        <Image
-                            src={skill.icon}
-                            alt={skill.name}
-                            width={40}
-                            height={40}
-                            className="mb-2 rounded"
-                        />
-                        <span className="text-white font-medium">{skill.name}</span>
-                    </div>
+                {skills.map((skill, index) => (
+                 <Skill index={index} icon={skill.icon} name={skill.name} key={index} />
                 ))}
             </div>
         </div>

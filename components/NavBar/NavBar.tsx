@@ -50,7 +50,7 @@ export default function NavBar() {
             </div>
             <div className="relative">
                 <Image
-                    src={scrolled ? "/fatima.png" : "/fatima.png"}
+                    src={"/fatima.png" }
                     width={150}
                     height={100}
                     style={{ objectFit: 'cover' }}

@@ -1,7 +1,9 @@
 import ProjectCard from '@/components/projectCard/ProjectCard'
+import { projectsData } from '@/constant/projects'
 import React from 'react'
 
 export default function ProjectsPage() {
+
     return (
         <div className='w-full pb-8 pt-8' >
                 <div className="text-center mb-12">
@@ -15,9 +17,11 @@ export default function ProjectsPage() {
                 Projects
             </p>
             <div className='grid grid-cols-3 gap-4 w-full pt-8' >
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+              {
+                projectsData?.map((pro) => (
+                     <ProjectCard data={pro} key={pro.id} />
+                ))
+              }
             </div>
 
         </div>

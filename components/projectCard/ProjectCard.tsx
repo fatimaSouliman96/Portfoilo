@@ -1,21 +1,58 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { motion } from "framer-motion";
+import { projectsType } from '@/types/types';
+interface ProjectCardProps {
+    data: projectsType
+}
 
-export default function ProjectCard() {
+const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
     return (
-        <div className='w-full bg-white/5 rounded-[3rem] shadow-[0px_6px_10px_0px_rgba(23,19,63,0.25)]' >
-            <div className='relative w-full h-48 rounded-[3rem]' >
-                <Image style={{ objectFit: 'cover' }} className='rounded-[3rem]' src='/about-img2.png' fill alt='project' />
-            </div>
-            <div className=' p-8 ' >
-                <h1 className='text-white font-bold text-xl '>Project 1</h1>
-                <p className='text-white pt-2 pb-2'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem esse nobis provident, eaque, culpa quos possimus corporis facilis eligendi repudiandae iste sunt incidunt maiores accusantium obcaecati nesciunt nulla dolorum placeat?
-                </p>
-                <Link href="#" className='text-white font-bold bg-accent rounded-[3rem] p-2 mt-6 hover:bg-white hover:text-accent transition-all duration-300' >See more <Image alt='arrow' width={10} height={10} src="/arrow-right-white.svg" /> </Link>
-            </div>
-            
-        </div>
+        <motion.div
+            viewport={{ once: true, amount: 0.5 }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: data.id / 5 }}
+        >  <div className="w-full bg-white/5 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-700">
+                {/* Image Section */}
+                <div className="relative w-full h-48">
+                    <Image
+                        src={data.image}
+                        alt="project"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+
+                {/* Content Section */}
+                <div className="p-6 flex flex-col gap-4">
+                    <h2 className="text-white text-2xl font-semibold">{data.title}</h2>
+                    <p className="text-white text-sm leading-relaxed opacity-90">
+                        {data.description_sub}
+                    </p>
+
+                    {/* Button */}
+                    <Link
+                        href={`/projects/${data.id}`}
+                        className="inline-flex items-center self-start gap-2 text-sm font-semibold text-secondary bg-white px-5 py-2 rounded-2xl transition-all duration-700 hover:shadow-[inset_0px_1px_20px_20px_#4f17874f]"
+
+                    >
+                        See more
+                        <Image
+                            src="/arrow-right-white.svg"
+                            alt="arrow"
+                            width={14}
+                            height={14}
+                            className="invert transition duration-700 group-hover:translate-x-1"
+                        />
+                    </Link>
+                </div>
+            </div></motion.div>
+
     )
 }
+
+export default ProjectCard

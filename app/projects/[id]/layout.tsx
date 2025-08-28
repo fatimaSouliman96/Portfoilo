@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/footer/Footer";
 import { Work_Sans } from "next/font/google";
 
 
@@ -13,13 +15,13 @@ const workSans = Work_Sans({
 export async function generateMetadata(): Promise<Metadata> {
 
   return {
-    title: "Fatima Souliman | About Me",
+    title: "Fatima Souliman | Projects",
     description: "I'm fatima souliman a front end developer",
     keywords: "fatima, souliman, front end developer, developer, next js, react js",
   };
 }
 
-export default function AboutLayout({
+export default function ProjectLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -27,7 +29,6 @@ export default function AboutLayout({
 
   return (
     <>
-
       {children}
 
     </>

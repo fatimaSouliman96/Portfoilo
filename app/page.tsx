@@ -6,12 +6,10 @@ export default async function Home() {
   return (
 
     <>
-
       <Hero />
       <Projects />
       <Skills />
       <Contact />
-      
     </>
 
   );

@@ -37,7 +37,7 @@ export default function RootLayout({
       >
     
         <NavBar />
-        <main className="flex max-w-full flex-col px-16 items-center sm:items-start pt-28">
+        <main className="flex max-w-full flex-col px-16 items-center sm:items-start pt-44 lg:pt-28 md:pt-28">
           {children}
         </main>
         <Footer />
