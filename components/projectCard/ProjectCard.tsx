@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
             viewport={{ once: true, amount: 0.5 }}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: data.id / 5 }}
+            transition={{ duration: Number(data.id) / 5 }}
         >  <div className="w-full bg-white/5 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-700">
                 {/* Image Section */}
                 <div className="relative w-full h-48">

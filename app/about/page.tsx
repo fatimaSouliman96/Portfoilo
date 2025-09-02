@@ -19,7 +19,7 @@ export default function AboutPage() {
                 <div className="flex-1 text-white">
                     <h2 className="text-4xl font-bold mb-4">About Me</h2>
                     <p className="text-lg text-gray-300 leading-relaxed">
-                        I'm Fatima Souliman, a Front-End Developer with over 2.5 years of experience in building responsive, user-friendly websites using React, Next.js, TypeScript, and Tailwind CSS. I'm passionate about delivering high-quality code and mentoring newcomers in the tech world. I co-lead a team that supports new developers by offering real project experience and guidance.
+                        I&apos;m Fatima Souliman, a Front-End Developer with over 2.5 years of experience in building responsive, user-friendly websites using React, Next.js, TypeScript, and Tailwind CSS. I&apos;m passionate about delivering high-quality code and mentoring newcomers in the tech world. I co-lead a team that supports new developers by offering real project experience and guidance.
                     </p>
 
                     <a

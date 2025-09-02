@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import HeroImage from '../heroImage/heroImage'
@@ -10,9 +9,9 @@ export default function Hero() {
         <div className='w-full flex flex-wrap items-center justify-center gap-10 lg:h-[90vh] md:h-[90vh] h-fit' >
             <div className='w-full lg:w-[45%] md:w-[45%] '>
                 <p className='text-white text-4xl font-extrabold leading-[4rem]' >
-                    Hi! I'm Fatima Souliman
+                    Hi! I&apos;m Fatima Souliman
                     <br />
-                    I'm a front end developer ...
+                    I&apos;m a front end developer ...
                 </p>
                 <p className='text-white text-xl font-medium leading-[3rem]' >
                     I design and develop interactive interfaces using React and Next.js.

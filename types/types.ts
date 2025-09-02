@@ -22,7 +22,7 @@ export type TAPIResponce<T> = TSuccessResponce<T> | TErrorResponce
 
 export type projectsType = 
     {
-        id: number,
+        id: string,
         image: string,
         title: string,
         lang_tools: string,

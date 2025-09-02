@@ -4,7 +4,7 @@ import { projectsType } from "@/types/types";
 
 export const projectsData: projectsType[] = [
     {
-        id: 1,
+        id: "1",
         image: "/sorbon.png",
         title: "Sorbon website",
         lang_tools: "Next.js, TypeScript",
@@ -16,7 +16,7 @@ export const projectsData: projectsType[] = [
         live_host: "https://sorbon-website.vercel.app/"
     },
     {
-        id: 2,
+        id: "2",
         image: "/telecom.png",
         title: "Dashboard for Ebrahem Telecom ",
         lang_tools: "React.js, Tailwind CSS, Context API, Axios, Cookies",
