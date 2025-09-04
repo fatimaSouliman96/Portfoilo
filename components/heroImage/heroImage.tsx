@@ -15,8 +15,8 @@ export default function HeroImage() {
                 <Image
                     src={"/hero.png"}
                     fill
-                    style={{ objectFit: 'cover' }}
-                    className='pt-20 pl-40'
+                    style={{ objectFit: 'contain' }}
+                    className='lg:pt-20 lg:pl-40 sm:pt-0 sm:pl-0'
                     unoptimized={true}
                     alt="Fatima Souliman"
                 />

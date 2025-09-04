@@ -4,6 +4,7 @@ import React from 'react'
 
 export default function ProjectsPage() {
 
+
     return (
         <div className='w-full pb-8 pt-8' >
                 <div className="text-center mb-12">
@@ -16,7 +17,7 @@ export default function ProjectsPage() {
             <p className='text-white text-4xl font-extrabold leading-[4rem]' >
                 Projects
             </p>
-            <div className='grid grid-cols-3 gap-4 w-full pt-8' >
+            <div className='grid lg:grid-cols-3 md:grid-col-2 grid-cols-1 gap-4 w-full pt-8' >
               {
                 projectsData?.map((pro) => (
                      <ProjectCard data={pro} key={pro.id} />

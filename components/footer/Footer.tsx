@@ -6,7 +6,11 @@ export default function Footer() {
     return (
         <footer className="relative w-full bg-gradient-to-b bg-black pt-8 ">
             <div className='w-full h-[1px] bg-secondary mb-8 shadow-[-3px_5px_20px_0px_#ffffff]' ></div>
-            <div className=' px-16 grid grid-cols-[auto_auto_auto_auto] gap-[12%]  items-start '>
+            <div className=' px-16 grid lg:grid-cols-[auto_auto_auto_auto] md:grid-cols-[auto_auto] grid-cols-[auto]   items-start 
+            lg:gap-[12%]
+            md:gap-[10%]
+            
+            '>
                 <div className=" relative flex flex-col gap-10">
                     <Image src="/fatima.png" width={150} height={200} alt="sorbon-logo" />
 
@@ -54,7 +58,7 @@ export default function Footer() {
                 </div>
             </div>
  
-            <div className="absolute z-50 bottom-0 left-0 w-80 h-80  bg-[radial-gradient(circle_at_bottom_left,_#4f178777,_transparent_60%)]" >
+            <div className="absolute z-[-1] bottom-0 left-0 w-80 h-80  bg-[radial-gradient(circle_at_bottom_left,_#4f178777,_transparent_60%)]" >
 
             </div>
         </footer>

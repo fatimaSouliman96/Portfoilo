@@ -24,9 +24,16 @@ export default function NavBar() {
     }, []);
 
     // Close menu on outside click
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
-            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node) &&
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target as Node)
+            ) {
                 setOpen(false);
             }
         }
@@ -39,18 +46,17 @@ export default function NavBar() {
 
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [open]);
-
     return (
         <nav
-            className={` transition-all duration-300 max-w-full w-full fixed top-0 px-12 z-40 flex items-center justify-between
-           bg-black`}
+            className={` transition-all shadow-md shadow-[#37415140] duration-300 max-w-full w-full fixed top-0 px-12 z-40 flex items-center justify-between
+           bg-black `}
         >
-            <div className="absolute z-50 top-0 right-0 w-80 h-80  bg-[radial-gradient(circle_at_top_right,_#4f178777,_transparent_60%)]" >
+            <div className="absolute z-[-1] top-0 right-0 w-80 h-80  bg-[radial-gradient(circle_at_top_right,_#4f178777,_transparent_60%)]" >
 
             </div>
             <div className="relative">
                 <Image
-                    src={"/fatima.png" }
+                    src={"/fatima.png"}
                     width={150}
                     height={100}
                     style={{ objectFit: 'cover' }}
@@ -81,7 +87,7 @@ export default function NavBar() {
                 <ul
                     ref={menuRef}
                     className={`absolute top-[7rem] left-0 flex flex-col items-center w-full gap-4 lg:hidden md:flex
-                    ${scrolled ? "bg-[#4F1787]" : "bg-primary"} p-3`}
+                     bg-[#4F1787] p-3`}
                 >
                     {navLinks.map((ele) => {
                         const isActive = pathname === ele.link;
@@ -103,8 +109,9 @@ export default function NavBar() {
             {/* Mobile Menu Button */}
             <div className="flex gap-2 items-center">
                 <button
+                    ref={buttonRef}
                     onClick={() => setOpen(!open)}
-                    className="sm:flex flex md:flex lg:hidden flex-col gap-2 w-8"
+                    className=" flex lg:hidden flex-col gap-2 w-8"
                 >
                     <span className={`block w-full h-1 transition-all duration-300 ${scrolled ? "bg-[#4F1787]" : "bg-white"}`}></span>
                     <span className={`block w-full h-1 transition-all duration-300 ${scrolled ? "bg-[#4F1787]" : "bg-white"}`}></span>

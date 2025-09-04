@@ -11,14 +11,14 @@ export default function Projects() {
             <p className='text-white text-4xl font-extrabold leading-[4rem]' >
                 Projects
             </p>
-            <div className='grid grid-cols-3 gap-4 w-full pt-8' >
+            <div className='grid lg:grid-cols-3 md:grid-col-2 grid-cols-1 gap-4 w-full pt-8' >
                 {
                     projectsData?.map((pro) => (
                         <ProjectCard data={pro} key={pro.id} />
                     ))
                 }
             </div>
-            <div className='w-1/2 mx-auto mt-8' >
+            <div className='lg:w-1/2 md:w-1/2 w-full  mx-auto mt-8' >
                 <Link href="#" className='w-1/2 text-center block text-white mt-8 mx-auto font-bold bg-accent rounded-[3rem] p-2  hover:bg-white hover:shadow-[inset_0px_1px_20px_20px_#ffffff61] transition-all duration-700' >See more <Image alt='arrow' width={10} height={10} src="/arrow-right-white.svg" /> </Link>
             </div>
         </div>

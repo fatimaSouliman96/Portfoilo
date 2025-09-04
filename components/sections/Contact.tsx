@@ -9,8 +9,7 @@ export default function Contact() {
             <p className="text-white text-4xl font-extrabold leading-[4rem]">
                         Contact me
                     </p>
-            <div className='flex w-full justify-between items-center' >
-
+            <div className='flex w-full lg:flex-nowrap md:flex-nowrap flex-wrap justify-between items-center' >
                 <div>
                     
 
@@ -81,11 +80,11 @@ export default function Contact() {
                         </ul>
                     </div>
                 </div>
-                <div className="w-[40%] h-[400px] relative ml-16">
+                <div className="w-full lg:w-[40%] h-[400px] relative lg:ml-16">
                     <Image
                         src={"/Social media-amico.svg"}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain' }}
                         unoptimized={true}
                         alt="Fatima Souliman"
                     />
