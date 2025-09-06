@@ -6,7 +6,7 @@ export default function ProjectsPage() {
 
 
     return (
-        <div className='w-full pb-8 pt-8' >
+        <div className='w-full pb-8 pt-16' >
                 <div className="text-center mb-12">
                 <h1 className="text-5xl font-bold text-white mb-4">My Projects</h1>
                 <p className="text-gray-300 max-w-xl mx-auto">

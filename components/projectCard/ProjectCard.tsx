@@ -31,7 +31,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
                 <div className="p-6 flex flex-col gap-4">
                     <h2 className="text-white text-2xl font-semibold">{data.title}</h2>
                     <p className="text-white text-sm leading-relaxed opacity-90">
-                        {data.description_sub}
+                        {
+                            data.description_sub.length <= 153 ?
+                            data.description_sub 
+                            :
+                            data.description_sub.slice(0,153) + " ... "
+                        }
                     </p>
 
                     {/* Button */}

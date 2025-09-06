@@ -5,9 +5,10 @@ import Image from "next/image";
 interface SkillProps {
     icon: string,
     name: string,
-    index: number
+    index: number,
+    score: string
 }
-const Skill: React.FC<SkillProps> = ({ icon, name, index }) => {
+const Skill: React.FC<SkillProps> = ({ icon, name, index, score }) => {
     return (
         <motion.div
             viewport={{ once: true, amount: 0.5 }}
@@ -16,16 +17,20 @@ const Skill: React.FC<SkillProps> = ({ icon, name, index }) => {
             transition={{ duration: index / 5 }}
         >         <div
             key={name}
-            className="group bg-white/5 hover:bg-white/10 transition-all p-4 rounded-2xl flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.1)]"
+            className="gap-1 h-28 bg-white/5 hover:bg-white/10 transition-all p-4 rounded-2xl flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.1)]"
         >
-                <Image
-                    src={icon}
-                    alt={name}
-                    width={40}
-                    height={40}
-                    className="mb-2 rounded"
-                />
-                <span className="text-white font-medium">{name}</span>
+                <div className="h-10 w-10" >
+                    <Image
+                        src={icon}
+                        alt={name}
+                        width={40}
+                        height={40}
+                        className="rounded mb-2"
+                    />
+                </div>
+                <span className="text-sm text-gray-400">{score}</span>
+                <span className="text-base text-white font-semibold">{name}</span>
+
             </div></motion.div>
 
     )
