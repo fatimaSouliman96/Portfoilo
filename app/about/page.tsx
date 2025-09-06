@@ -1,6 +1,5 @@
 import AboutImage from '@/components/aboutImage/AboutImage'
 import AboutText from '@/components/aboutText/AboutText'
-import Image from 'next/image'
 import React from 'react'
 
 export default function AboutPage() {

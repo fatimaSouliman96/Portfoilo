@@ -1,7 +1,5 @@
 import ContactInfo from '@/components/contactInfo/ContactInfo';
 import ImageContact from '@/components/imageContact/ImageContact';
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
 export default function ContactPage() {

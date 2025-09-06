@@ -1,6 +1,5 @@
 import Skill from '@/components/Skill/Skills';
 import { skills } from '@/constant/skills';
-import Image from 'next/image';
 import React from 'react'
 
 export default function SkillsPage() {

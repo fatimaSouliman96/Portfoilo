@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import ImageContact from '../imageContact/ImageContact'
 import ContactInfo from '../contactInfo/ContactInfo'
 
