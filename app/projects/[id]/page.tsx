@@ -1,11 +1,11 @@
 import { projectsData } from "@/constant/projects";
 import Image from "next/image";
 
-type ProjectPageProps = Promise<{ id: string[] }>
+type ProjectPageProps = Promise<{ id: string}>
 
 export default async function Page(props: { params: ProjectPageProps }) {
     const { id } = await props.params;
-    const productID = Number(id[1]); // إذا بدك رقم
+    const productID = Number(id); 
     const project = projectsData.find(p => Number(p.id) === productID);
 
     if (!project) return <p className="text-white p-8">Project not found</p>;
